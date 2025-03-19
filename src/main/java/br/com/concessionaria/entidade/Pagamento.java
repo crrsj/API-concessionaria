@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import br.com.concessionaria.dto.AtualizarPGTO;
+
 import br.com.concessionaria.enums.FormaPagamento;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,31 +39,7 @@ public class Pagamento {
 	@JoinColumn(name = "veiculo_id")
 	private Veiculo veiculo;
 	
-	public void atualizando(AtualizarPGTO atualizarPGTO) {
-		if(atualizarPGTO.getFormaPagamento()!= null) {
-			this.formaPagamento = atualizarPGTO.getFormaPagamento();
-		}
-		
-		if(atualizarPGTO.getParcelas()!= null) {
-			this.parcelas = atualizarPGTO.getParcelas();
-		}
-		
-		if(atualizarPGTO.getFinanciadora()!= null) {
-			this.financiadora = atualizarPGTO.getFinanciadora();
-		}
-		
-		if(atualizarPGTO.getDiaPagamento()!= null) {
-			this.diaPagamento = atualizarPGTO.getDiaPagamento();
-		}
-		
-		if(atualizarPGTO.getValorEntrada()!= null) {
-			this.valorEntrada = atualizarPGTO.getValorEntrada();
-			
-		}
-		
-		if(atualizarPGTO.getTotal()!= null) {
-			this.total = atualizarPGTO.getTotal();
-		}
+	
 	}
 	
-}
+

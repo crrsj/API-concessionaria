@@ -42,9 +42,8 @@ public class PagamentoServico {
 	}
 	
 	public Pagamento atualizarPagamento(AtualizarPGTO atualizarPGTO,Long id) {
-		var atualizar = buscarPorId(id);
-		 atualizar.atualizando(atualizarPGTO);
-		 return pagamentoRepositorio.save(modelMapper.map(atualizar, Pagamento.class));
+		atualizarPGTO.setId(id);
+		 return pagamentoRepositorio.save(modelMapper.map(atualizarPGTO, Pagamento.class));
 		
 	}
 	

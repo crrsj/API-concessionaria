@@ -30,8 +30,8 @@ public class EnderecoControle {
 	
 	
 	@PostMapping("/{clienteId}")
-	@Operation(summary = "Endpoint responsável por buscar endereço passanso o id do cliente.") 
-    @ApiResponse(responseCode = "204",description = " sucesso",content = {
+	@Operation(summary = "Endpoint responsável por cadastrar endereço passando o id do cliente.") 
+    @ApiResponse(responseCode = "201",description = " sucesso",content = {
    	@Content(mediaType = "application.json",schema = @Schema(implementation = ResponseEntity.class))
     })           
 	public ResponseEntity<CadastroEndereco>cadastrarEndereco(@RequestBody @Valid  CadastroEndereco cadastroEndereco,
@@ -51,7 +51,7 @@ public class EnderecoControle {
 	public ResponseEntity<AtualizarEnderecos>atualizarEndereco(@RequestBody @Valid AtualizarEnderecos atualizarEnderecos,
 			                                                   @PathVariable Long id){
 		var atualizar = enderecoServico.atualizarEndereco(atualizarEnderecos, id);
-			return ResponseEntity.ok(modelMapper.map(atualizar, AtualizarEnderecos.class));
+		return ResponseEntity.ok(modelMapper.map(atualizar, AtualizarEnderecos.class));
 		}
 	
 }

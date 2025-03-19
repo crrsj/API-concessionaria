@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-import br.com.concessionaria.dto.AtualizarCliente;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,26 +35,9 @@ public class Cliente {
 	@OneToMany(mappedBy = "cliente",cascade = CascadeType.ALL,orphanRemoval = true)	
 	private List<Endereco>endereco;
 	
-	public void atualizando(AtualizarCliente atualizarCliente) {
-		if (atualizarCliente.getNome()!= null) {
-			this.nome = atualizarCliente.getNome();
-		}
-		if (atualizarCliente.getTelefone()!= null) {
-			this.telefone = atualizarCliente.getTelefone();
-		}
-		
-		if (atualizarCliente.getEmail()!= null) {
-			this.email = atualizarCliente.getEmail();
-		}
-		
-		if(atualizarCliente.getProfissao()!= null) {
-			this.profissao = atualizarCliente.getProfissao();
-		}
-		if (atualizarCliente.getOlerite()!= null) {
-			this.olerite = atualizarCliente.getOlerite();
-		}
+	
 	}
 	
 	
 
-}
+

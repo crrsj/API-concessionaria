@@ -35,33 +35,6 @@ public class Endereco {
 	private Cliente cliente;
 	public void atualizando(AtualizarEnderecos enderecos) {
 		
-	if(enderecos.getRua()!= null) {
-		this.rua = enderecos.getRua();
-	}
-	
-	if(enderecos.getNumero()!= null) {
-		this.numero = enderecos.getNumero();
-	}
-	
-	if(enderecos.getBairro()!= null) {
-		this.bairro = enderecos.getBairro();
-	}
-	
-	if(enderecos.getComplemento()!= null) {
-		this.complemento = enderecos.getComplemento();
-	}
-	
-	if(enderecos.getCidade()!= null) {
-		this.cidade = enderecos.getCidade();
-	}
-		
-	if(enderecos.getEstado()!= null) {
-		this.estado = enderecos.getEstado();
-	}
-	
-	if(enderecos.getCep()!= null) {
-		this.cep = enderecos.getCep();
-	}
 	}
 	
 	

@@ -28,9 +28,8 @@ public class EnderecoServico {
 	
 	
 	public Endereco atualizarEndereco(AtualizarEnderecos enderecos,Long id) {		
-		var atualizar = enderecoRepositorio.findById(id).orElseThrow();
-		atualizar.atualizando(enderecos);
-		return enderecoRepositorio.save(modelMapper.map(atualizar, Endereco.class));
+	    enderecos.setId(id);
+		return enderecoRepositorio.save(modelMapper.map(enderecos, Endereco.class));
 	}
 
 }

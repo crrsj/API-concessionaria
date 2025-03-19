@@ -42,9 +42,8 @@ public class VeiculoServico {
 	}
 	
 	public Veiculo atualizarVeiculo(AtualizarVeiculos atualizarDto,Long id) {
-		var atualizar = buscarPorId(id);
-		atualizar.atualizando(atualizarDto);
-		return veiculoRepositorio.save(modelMapper.map(atualizar, Veiculo.class));
+		atualizarDto.setId(id);
+		return veiculoRepositorio.save(modelMapper.map(atualizarDto, Veiculo.class));
 		
 	}
 	public Veiculo buscarPorPlaca(String placa) {

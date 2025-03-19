@@ -45,11 +45,10 @@ public class ClienteServico {
 	}
 	
 	
-
+    
 	public Cliente atualizarClientes(AtualizarCliente atualizarCliente,Long id) {
-		var atualizar = buscarPorId(id);
-		atualizar.atualizando(atualizarCliente);
-		return clienteRepositorio.save(atualizar);
+		 atualizarCliente.setId(id);     
+		return clienteRepositorio.save(modelMapper.map(atualizarCliente,Cliente.class));
 	}
 	
 	public void excluirCliente(Long id) {
