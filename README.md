@@ -8,6 +8,8 @@ buscar veículo por placa, dentre outras funcionalidades.
 Tecnologias:
 Java,Spring,H2,PostgreSql,Docker,ModelMapper,Swagger
 
+Para iniciar o banco de dados: docker compose up -d
+
 
 ![con1](https://github.com/user-attachments/assets/b1b65b0f-3a3b-436e-8dc7-d00897b36b82)
 ![con2](https://github.com/user-attachments/assets/54ff5f68-5ec8-46df-b651-4f5e76cba5c9)
